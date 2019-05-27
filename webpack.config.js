@@ -1,5 +1,6 @@
 let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/app/app.js',
@@ -43,7 +44,7 @@ module.exports = {
     host: '0.0.0.0'
   },
       plugins: [ 
-    
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
