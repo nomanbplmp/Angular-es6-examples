@@ -2,11 +2,17 @@ let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/app/index.js',
+    entry: './src/app/app.js',
     output: {
        path: path.resolve(__dirname, 'lib'),
-        filename: 'app.bundle.js',
+        filename: '[name].js',
     },
+    optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name:"vendor"
+    }},
+
     module: {
         rules: [
           {
@@ -20,7 +26,7 @@ module.exports = {
     },
  module: {
   rules: [{
-    test: /\.html$/,
+    test: /\.html$/,  
     use: [ {
       loader: 'html-loader'
     }],

@@ -2,10 +2,10 @@
   "name": "angular-es6",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack -p",
     "dev": "webpack-dev-server --mode development"
   },
   "author": "",
