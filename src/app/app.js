@@ -7,6 +7,10 @@ import uirouter from 'angular-ui-router';
 import home from '../features/home';
 import login from '../features/login';
 
-let app = angular.module('app',[uirouter,home,login]);
-console.log('adding routing')
-app.config(routing);
+let moduleName = 'app'
+
+angular.module(moduleName,[uirouter,home,login]).config(routing);
+
+angular.element(document).ready(function() {
+	angular.bootstrap(document, [moduleName]);
+});

@@ -4,7 +4,6 @@ export default class HomeController{
 	
 	constructor(loginService){
 		this.loginService=loginService;
-
 	}
 
 	doLogin(){
